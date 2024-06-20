@@ -8,7 +8,7 @@ namespace efapi.Controllers;
 public class VideoGameController : ControllerBase
 {
     [HttpGet]
-    public async Task<IActionResult> GetAllGames()
+    public async Task<ActionResult<List<VideoGame>>> GetAllGames()
     {
         var videoGames = new List<VideoGame>
         {
