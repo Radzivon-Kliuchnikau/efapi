@@ -12,5 +12,7 @@ public class VideoGame
 
     public string Publisher { get; set; } = string.Empty;
 
+    public float Rating { get; set; }
+
     public required List<Platform> Platforms { get; set; }
 }

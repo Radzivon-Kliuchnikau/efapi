@@ -7,14 +7,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
-if (builder.Environment.IsDevelopment())
-{
-    _ = builder.Configuration["fdfd"];
-}
-
 
 builder.Services.AddDbContext<DataContext>(options => {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Dev"));
 });
 
 var app = builder.Build();
